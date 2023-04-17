@@ -1,10 +1,14 @@
 import { Link } from 'gatsby';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { FiAlignJustify } from 'react-icons/fi';
 import logo from '../assets/images/logo.svg';
+import ThemeContext, { useThemeContext } from '../context/ThemeContext';
 
-const Navbar = () => {
+const Navbar = ({ siteTitle }) => {
+  const { dark, toggleDark } = useThemeContext();
   return (
+    // <ThemeContext.Consumer>
+    //  {/* {(theme) => ( */}
     <nav className="navbar">
       <div className="nav-center">
         <div className="nav-header">
@@ -37,9 +41,16 @@ const Navbar = () => {
               contact
             </Link>
           </div>
+          <div>
+            <button className="btn" onClick={toggleDark}>
+              {dark ? <span>Light mode ☀</span> : <span>Dark mode ☾</span>}
+            </button>
+          </div>
         </div>
       </div>
     </nav>
+    // {/* )} */}
+    // </ThemeContext.Consumer>
   );
 };
 export default Navbar;
