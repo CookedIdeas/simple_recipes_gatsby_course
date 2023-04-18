@@ -7,12 +7,10 @@ import slugify from 'slugify';
 import { Seo } from '../../components/seo';
 
 const RecipeTemplate = ({ data }) => {
-  console.log(data.contentfulRecipe);
   const { title, prepTime, cookTime, content, servings, description, image } =
     data.contentfulRecipe;
   const { tags, ingredients, instructions, tools } = content;
   const pathToImage = getImage(image);
-  console.log(pathToImage);
   return (
     <Layout>
       <main className="page">

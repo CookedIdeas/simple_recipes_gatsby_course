@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/layout';
 import RecipesList from '../components/RecipesList';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql } from 'gatsby';
 import { Seo } from '../components/seo';
 
 const Contact = ({ data }) => {

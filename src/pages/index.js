@@ -5,7 +5,6 @@ import AllRecipes from '../components/AllRecipes';
 import { Seo } from '../components/seo';
 
 const IndexPage = (props) => {
-  console.log(props);
   return (
     <Layout>
       <main className="page">
@@ -14,7 +13,7 @@ const IndexPage = (props) => {
             src="../assets/images/main.jpeg"
             alt="eggs"
             className="hero-img"
-            layout="constrained"
+            layout="fullWidth"
             placeholder="blurred"
           />
           <div className="hero-container">
