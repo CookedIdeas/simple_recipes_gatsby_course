@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../components/layout';
 import AllRecipes from '../components/AllRecipes';
+import { Seo } from '../components/seo';
 
 const Recipes = () => {
   return (
@@ -12,3 +13,5 @@ const Recipes = () => {
   );
 };
 export default Recipes;
+
+export const Head = () => <Seo title="Recipes" />;

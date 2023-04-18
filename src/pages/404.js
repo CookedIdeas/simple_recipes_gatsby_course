@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout';
+import { Seo } from '../components/seo';
 
 const NotFoundPage = () => {
   return (
@@ -16,4 +17,4 @@ const NotFoundPage = () => {
 
 export default NotFoundPage;
 
-export const Head = () => <title>Not found</title>;
+export const Head = () => <Seo title="Error" />;

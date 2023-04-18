@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Images = () => {
   return (
     <Wrapper>
-      <article>
+      {/* <article>
         <h4>constrained default</h4>
         <StaticImage
           src="../../assets/images/recipes/recipe-1.jpeg"
@@ -24,7 +24,7 @@ const Images = () => {
           placeholder="traceSVG"
           layout="constrained"
         />
-      </article>
+      </article> */}
     </Wrapper>
   );
 };

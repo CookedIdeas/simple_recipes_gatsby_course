@@ -9,14 +9,12 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: 'simply recipes',
-    description: 'nice and clean recipes site',
+    description:
+      'Find easily nice and clean recipes on our sites ! Made with Gatsby with passion ;)',
+    lang: 'en',
     author: '@Gsquare',
-    person: { name: 'cooked', age: 31 },
-    simpleData: ['item1', 'item2'],
-    complexData: [
-      { name: 'cooked', age: 31 },
-      { name: 'susan', age: 18 },
-    ],
+    linkedInUsername: 'Gabriel G.',
+    image: './src/assets/android-chrome-192x192.png',
     siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
@@ -46,5 +44,28 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google: [
+            {
+              family: 'Montserrat', // 'font-family' property
+              variants: ['400'],
+            },
+            {
+              family: 'Inconsolata', // 'font-family' property
+              variants: ['300', '400', '500', '600', '700'],
+            },
+          ],
+        },
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: 'src/assets/android-chrome-192x192.png',
+      },
+    },
   ],
 };

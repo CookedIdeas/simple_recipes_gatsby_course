@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../components/layout';
 import RecipesList from '../components/RecipesList';
 import { graphql, useStaticQuery } from 'gatsby';
+import { Seo } from '../components/seo';
 
 const Contact = ({ data }) => {
   const featuredRecipes = data.allContentfulRecipe.nodes;
@@ -24,7 +25,11 @@ const Contact = ({ data }) => {
             </p>
           </article>
           <article>
-            <form action="" className="form contact-form">
+            <form
+              action="https://formspree.io/f/meqwvqkn"
+              method="POST"
+              className="form contact-form"
+            >
               <div className="form-row">
                 <label htmlFor="name">Your name</label>
                 <input type="text" name="name" id="name" />
@@ -62,11 +67,7 @@ export const query = graphql`
         cookTime
         prepTime
         image {
-          gatsbyImageData(
-            placeholder: TRACED_SVG
-            width: 200
-            layout: CONSTRAINED
-          )
+          gatsbyImageData(placeholder: BLURRED, width: 200, layout: CONSTRAINED)
         }
       }
     }
@@ -74,3 +75,5 @@ export const query = graphql`
 `;
 
 export default Contact;
+
+export const Head = () => <Seo title="Contact Page" />;

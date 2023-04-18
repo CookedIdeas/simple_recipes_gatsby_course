@@ -2,8 +2,10 @@ import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
 import Layout from '../components/layout';
 import AllRecipes from '../components/AllRecipes';
+import { Seo } from '../components/seo';
 
-const IndexPage = () => {
+const IndexPage = (props) => {
+  console.log(props);
   return (
     <Layout>
       <main className="page">
@@ -12,7 +14,8 @@ const IndexPage = () => {
             src="../assets/images/main.jpeg"
             alt="eggs"
             className="hero-img"
-            placeholder="tracedSVG"
+            layout="constrained"
+            placeholder="blurred"
           />
           <div className="hero-container">
             <div className="hero-text">
@@ -29,4 +32,4 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head = () => <title>Home Page</title>;
+export const Head = () => <Seo title="Home Page" />;

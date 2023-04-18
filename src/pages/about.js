@@ -3,6 +3,7 @@ import Layout from '../components/layout';
 import { StaticImage } from 'gatsby-plugin-image';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import RecipesList from '../components/RecipesList';
+import { Seo } from '../components/seo';
 
 const About = ({ data }) => {
   const featuredRecipes = data.allContentfulRecipe.nodes;
@@ -52,11 +53,7 @@ export const query = graphql`
         cookTime
         prepTime
         image {
-          gatsbyImageData(
-            placeholder: TRACED_SVG
-            width: 200
-            layout: CONSTRAINED
-          )
+          gatsbyImageData(placeholder: BLURRED, width: 200, layout: CONSTRAINED)
         }
       }
     }
@@ -64,3 +61,5 @@ export const query = graphql`
 `;
 
 export default About;
+
+export const Head = () => <Seo title="About Page" />;

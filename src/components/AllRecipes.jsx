@@ -12,11 +12,7 @@ const query = graphql`
         cookTime
         prepTime
         image {
-          gatsbyImageData(
-            placeholder: TRACED_SVG
-            width: 200
-            layout: CONSTRAINED
-          )
+          gatsbyImageData(placeholder: BLURRED, width: 200, layout: CONSTRAINED)
         }
         content {
           tags
